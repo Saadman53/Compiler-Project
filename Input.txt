@@ -1,0 +1,94 @@
+Null START(){
+
+	# Declaring variables
+	Num ab,bc,cd;
+
+	# This is a single line comment
+
+	Num de:47.0,e:5.3;
+	Whole f:100;
+
+	Text str: "Hello everyone :3";
+
+	Show(4 + 3 * e + f / 2 - de);
+
+	Show(de);
+	Show(3.5);
+	Show(str);
+	Show(5);
+	Show("Hello World!!!");
+
+	Whole x;
+	x:10;
+
+	Show(x=5.0);
+
+	Show( (f*e) > MUL(x,f) );
+
+	ab:10.0;
+	bc:5.0;
+	cd:7.0;
+	de:8.0;
+
+	# if else statements
+
+	Whether ( ( ab + de ) < SUM( bc , cd ) ) {
+		Show("ab+de is smaller than bc+cd");
+	}
+	OrElse ( ( ab + cd ) < SUM(bc,de) ) {
+		Show("ab+cd is less than bc+de");
+	}
+	OrElse ( ( ab + de ) < SUM(bc,cd) ) {
+		Show("ab+de is greater than bc+cd");
+	}
+	Or {
+		Show("ab+de is less than bc+cd");
+	}
+
+
+	Show("Now we move to the Match cases");
+
+	ab:2.0;
+	cd:3.0;
+	de:4.0;
+
+	Num p:20.0;
+
+	Check( p ) {
+		Match ( MUL ( ab , cd ) ) {
+			Show("Matched with first case");
+		}
+		Match ( MUL ( cd , de) ) {
+			Show("Matched with second case");
+		}
+		Match( MUL ( 5.0 , de ) ) {
+			Show("Matched with third case");
+		}
+		NoMatch {
+			Show("No match");
+		}
+	}
+
+	Show("Now we move to the Repeat loops.");
+
+	Show("First repeat loop:");
+
+	Repeat ( 1 : 5 : 2 ) {
+	   Show("This message will be shown 2 times");
+	}
+
+	Show("Second repeat loop:");
+	Repeat ( 4 : 1 ) {
+	   Show("This message will be shown 3 times");
+	}
+
+	Show("Now we move to the until do loops");
+
+	Until ( -x ) , iter[ 2 ] do : {
+	   Show("This message will be shown 5 times");
+	}
+
+	PLD("1001");
+	Text snew : "abbcbba";
+	PLD( snew );
+}
